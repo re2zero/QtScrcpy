@@ -467,7 +467,7 @@ void VideoForm::switchFullScreen()
         }
 
         showNormal();
-        // back to normal size.
+        // on Linux platform(debian/ubuntu), it needs resize as recorded size in order to back to the original normal size.
         resize(m_normalSize);
         // fullscreen window will move (0,0). qt bug?
         move(m_fullScreenBeforePos);
